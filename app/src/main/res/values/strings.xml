@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">meigen_generator</string>
+    <string name="meigen">meigen</string>
+    <string name="generate">名言作成</string>
+    <string name="generate_bottom">タップで作成！</string>
 </resources>

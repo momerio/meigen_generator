@@ -6,3 +6,8 @@ com/kis/meigen_generator/button/AlphaButton.java
  com.kis.meigen_generator.button.AlphaButton
 com/kis/meigen_generator/MainActivity.java
  com.kis.meigen_generator.MainActivity
+ com.kis.meigen_generator.MainActivity$1
+com/kis/meigen_generator/api/DataMeigen.java
+ com.kis.meigen_generator.api.DataMeigen
+ com.kis.meigen_generator.api.DataMeigen$1
+ com.kis.meigen_generator.api.DataMeigen$1$1

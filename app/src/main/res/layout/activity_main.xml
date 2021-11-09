@@ -19,7 +19,7 @@
             android:gravity="center">
 
             <com.kis.meigen_generator.button.PushButton
-                android:id="@+id/generate"
+                android:id="@+id/generate_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
@@ -33,7 +33,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/generate_bottom"
+                android:id="@+id/generate_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -42,7 +42,7 @@
                 android:textColor="@color/white"/>
 
             <TextView
-                android:id="@+id/meigen"
+                android:id="@+id/meigenView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"

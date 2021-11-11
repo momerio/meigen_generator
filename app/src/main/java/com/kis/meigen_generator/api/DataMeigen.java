@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -13,6 +14,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -22,12 +24,16 @@ import okhttp3.Response;
 
 public class DataMeigen {
 
-    private String urlHead = "https://www.konan-kigyoken.work/meigen-generator-api/index.php";
+    private Apikey apikey = new Apikey();
+
+    private String urlHead = "https://momdev.club/meigen-generator-api/index.php";
     private String urlId   = "testhoge";
-    private String urlKey  = getApiKey();
+    private String urlKey  = apikey.getApikey();
     private String urlGenerateNum = "3";
     private String url = urlHead + "?id=" + urlId + "&key=" + urlKey + "&generate_num=" + urlGenerateNum;
 
+
+    // ファイル読み込みでAPIkeyを取得
     private String getApiKey() {
 
         String apiKey = "";
@@ -90,15 +96,20 @@ public class DataMeigen {
                         //JSON処理
                         try{
                             //jsonパース
-                            JSONObject json = new JSONObject(jsonStr);
-                            final String data = json.getString("debug");
+                            JSONObject json      = new JSONObject(jsonStr);
+                            JSONArray  jsonArray = json.getJSONArray("data");
+
+                            final String[] data  = new String[Integer.parseInt(urlGenerateNum)];
+                            for (int i = 0; i < Integer.parseInt(urlGenerateNum); i++) {
+                                data[i] = jsonArray.get(i).toString();
+                            }
 
                             //親スレッドUI更新
                             Handler mainHandler = new Handler(Looper.getMainLooper());
                             mainHandler.post(new Runnable() {
                                 @Override
                                 public void run() {
-                                    meigenView.setText(data);
+                                    meigenView.setText(data[0]);
                                 }
                             });
 

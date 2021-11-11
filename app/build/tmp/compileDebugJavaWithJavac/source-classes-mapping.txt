@@ -4,6 +4,8 @@ com/kis/meigen_generator/BuildConfig.java
  com.kis.meigen_generator.BuildConfig
 com/kis/meigen_generator/button/AlphaButton.java
  com.kis.meigen_generator.button.AlphaButton
+com/kis/meigen_generator/api/Apikey.java
+ com.kis.meigen_generator.api.Apikey
 com/kis/meigen_generator/MainActivity.java
  com.kis.meigen_generator.MainActivity
  com.kis.meigen_generator.MainActivity$1

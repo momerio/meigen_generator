@@ -38,7 +38,7 @@ public class DataMeigen {
 
         String apiKey = "";
         try {
-            File file = new File("apikey.txt");
+            File file = new File("apikey");
             BufferedReader br = new BufferedReader(new FileReader(file));
 
             apiKey = br.readLine();

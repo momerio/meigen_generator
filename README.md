@@ -1,5 +1,5 @@
 # meigen_generator
-Android
+Android Studio
 
 ## 名言例
 - やれよ。とことん、おもいきりやれよ。 (BLUE GIANTより)
